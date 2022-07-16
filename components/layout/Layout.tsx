@@ -24,12 +24,19 @@ export default function Layout({ children }: any) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box px={[2, 8]} alignItems="flex-start" justifyContent={"space-between"}>
+    <Flex
+      px={[4, 8]}
+      flexDirection="column"
+      alignItems="center"
+      justifyContent={"flex-start"}
+      width={"full"}
+      height="full"
+    >
       <Header />
       <Box as="main" p="4">
         {children}
       </Box>
       <Footer />
-    </Box>
+    </Flex>
   );
 }

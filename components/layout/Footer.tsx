@@ -8,7 +8,13 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { ReactNode } from "react";
 
 const SocialButton = ({
@@ -48,29 +54,33 @@ export default function Footer() {
     <Box
       bg={useColorModeValue("white", "transparent")}
       color={useColorModeValue("#111111", "white")}
+      position="fixed"
+      bottom={0}
+      px={[4, 8]}
+      width="100%"
     >
-        <Container
-          as={Stack}
-          maxW={"8xl"}
-          py={4}
-          direction={{ base: "column", md: "row" }}
-          spacing={4}
-          justify={{ base: "center", md: "space-between" }}
-          align={{ base: "center", md: "center" }}
-        >
-          <Text>© 2022 Raheem Wilson. All rights reserved</Text>
-          <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter />
-            </SocialButton>
-            <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube />
-            </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram />
-            </SocialButton>
-          </Stack>
-        </Container>
+      <Stack
+        maxW={"8xl"}
+        py={4}
+        direction={{ base: "column", md: "row" }}
+        spacing={4}
+        justify={{ base: "center", md: "space-between" }}
+        align={{ base: "center", md: "center" }}
+      >
+        {/* <Text>© 2022 Raheem Wilson. All rights reserved</Text> */}
+        <Link href="mailto:raheemzwilson@gmail.com">raheemzwilson@gmail.com</Link>
+        <Stack direction={"row"} spacing={6}>
+          <SocialButton label={"Twitter"} href={"https://twitter.com/zackiechan_dev"}>
+            <FaTwitter />
+          </SocialButton>
+          <SocialButton label={"Github"} href={"https://github.com/RaheemWilson"}>
+            <FaGithub />
+          </SocialButton>
+          <SocialButton label={"LinkedIn"} href={"https://www.linkedin.com/in/raheemwilson/"}>
+            <FaLinkedin />
+          </SocialButton>
+        </Stack>
+      </Stack>
     </Box>
   );
 }
