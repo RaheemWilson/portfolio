@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <Stack
       as={Box}
-      textAlign={"left"}
+      textAlign={"center"}
       minHeight="100%"
     >
       <Center>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
         lineHeight={"110%"}
       >
-        I am a software developer.
+        I am a software developer from Jamaica.
       </Heading>
     </Stack>
   );
